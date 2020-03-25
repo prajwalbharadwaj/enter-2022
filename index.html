@@ -11,16 +11,16 @@
 
     <title>Date and Time</title>
   </head>
-  <body>
+  <body id="myDiv">
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Date And Time</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-block">
+      <a class="navbar-brand" href="#">Date & Time</a>
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+      </button> -->
     
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+      <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto"> -->
           <!-- <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li> -->
@@ -38,11 +38,20 @@
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
           </li> -->
-        </ul>
+        <!-- </ul> -->
         <!-- <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form> -->
+        <!-- <div class="d-inline text-center text-light nav-logo">Date & Time 
+          <button type="button" class="btn btn-primary btn-sm" id="openbtn" onclick="openFullscreen();">Open</button> 
+          <button type="button" class="btn btn-primary btn-sm" id="closebtn" style="display: none;" onclick="closeFullscreen();">Close</button>
+        </div>
+        
+      </div> -->
+      <div class="float-right text-center text-light nav-logo"> 
+        <button type="button" class="btn btn-primary btn-sm" id="openbtn" onclick="openFullscreen();">Open</button> 
+        <button type="button" class="btn btn-primary btn-sm" id="closebtn" style="display: none;" onclick="closeFullscreen();">Close</button>
       </div>
     </nav>
 
@@ -82,15 +91,50 @@
     var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
 
     var now = new Date();
+    let tempSec = now.getSeconds();
+    if (tempSec < '10') {
+      tempSec = '0'+tempSec
+    }
 
     strDate +=  days[now.getDay()] + ", " + now.getDate() + " " + months[now.getMonth()] + " " + now.getFullYear();
-    strTime +=  now.getHours() +":" + now.getMinutes() + ":" + now.getSeconds();
+    strTime +=  now.getHours() +":" + now.getMinutes() + ":" + tempSec;
     document.getElementById("todaysDate").innerHTML = strDate;
     document.getElementById("todaysTime").innerHTML = strTime;
 
 }
 
 setInterval(doDate, 1000);
+
+var elem = document.getElementById("myDiv");
+// var elem = document.documentElement;
+function openFullscreen() {
+  document.getElementById("openbtn").style.display = 'none'
+  document.getElementById("closebtn").style.display = 'inline'
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+
+
+function closeFullscreen() {
+  document.getElementById("closebtn").style.display = 'none'
+  document.getElementById("openbtn").style.display = 'inline'
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.mozCancelFullScreen) { /* Firefox */
+    document.mozCancelFullScreen();
+  } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE/Edge */
+    document.msExitFullscreen();
+  }
+}
     </script>
     
     <script src="./js/slim/jquery-3.4.1.js"></script>
