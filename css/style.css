@@ -35,3 +35,27 @@ body {
     line-height: inherit;
     white-space: nowrap;
 }
+.neo-card {
+    /* min-width: 180px !important;
+    max-width: 180px !important; */
+    width: 180px;
+    height: 180px;
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    margin: 0 auto;
+    border-radius: 35px;
+    background: #ffffff;
+    box-shadow:  10px 10px 20px #cccccc, 
+                -10px -10px 20px #ffffff;
+}
+
+.neo-time-card {
+    width: fit-content;
+    padding: 30px 50px;;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  10px 10px 20px #cccccc, 
+                -10px -10px 20px #ffffff;
+}
