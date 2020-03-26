@@ -20,6 +20,12 @@ body {
 .fs-48 {
     font-size: 48px;
 }
+.fs-20 {
+    font-size: 20px;
+}
+.fs-30 {
+    font-size: 30px;
+}
 
 .nav-logo {
     padding-top: 0.3125rem;

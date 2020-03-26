@@ -61,23 +61,44 @@
     <div class="container-fluid pt-3">
       <div class="row">
         <div class="col-sm-12">
-          <div class="card">
+          <!-- <div class="card"> -->
             <!-- <img src="..." class="card-img-top" alt="...">
              -->
             <div class="card-body">
-              <h5 class="card-title fs-48">
-                <div class="text-center" id="todaysDate"></div>
-                <div class="text-center" id="todaysTime"></div>
+              <h5 class="card-title fs-20">
+                <div class="text-center mb-3" id="todaysDate"></div>
+                <div class="text-center fs-30" id="todaysTime"></div>
               </h5>
               <hr>
 
-              <h5 class="card-title fs-48">
-                <div class="text-center" id="demo"></div class="text-center">
-              </h5>
+              <!-- <h5 class="card-title fs-48"> -->
+                <!-- <div class="text-center fs-48" id="demo"></div class="text-center"> -->
+                  <div class="container-fluid">
+                    <div class="row text-center fs-20">
+                      <div class="col-3 col-sm-3 col-col-md-3">
+                        <div id="day">00</div>
+                        <div>Days</div>
+                      </div>
+                      <div class="col-3 col-sm-3 col-md-3">
+                        <div id="hour">00</div>
+                        <div>Hours</div>
+                      </div>
+                      <div class="col-3 col-sm-3 col-md-3">
+                        <div id="min">00</div>
+                        <div>Min</div>
+                      </div>
+                      <div class="col-3 col-sm-3 col-md-3">
+                        <div id="sec">00</div>
+                        <div>Sec</div>
+                      </div>
+                    </div>
+
+                  </div>
+              <!-- </h5> -->
               <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
               <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             </div>
-          </div>
+          <!-- </div> -->
 
         </div>
       </div>
@@ -93,16 +114,24 @@
     var strTime = "";
 
     var days = new Array("Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat");
-    var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+    var months = new Array("Jan", "Feb", "Mar", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec");
 
     var now = new Date();
-    let tempSec = now.getSeconds();
-    if (tempSec < '10') {
-      tempSec = '0'+tempSec
+    let tempCurHour = now.getHours();
+    let tempCurMin = now.getMinutes();
+    let tempCurSec = now.getSeconds();
+    if (tempCurHour < '10') {
+      tempCurHour = '0'+tempCurHour
+    }
+    if (tempCurMin < '10') {
+      tempCurMin = '0'+tempCurMin
+    }
+    if (tempCurSec < '10') {
+      tempCurSec = '0'+tempCurSec
     }
 
     strDate +=  days[now.getDay()] + ", " + now.getDate() + " " + months[now.getMonth()] + " " + now.getFullYear();
-    strTime +=  now.getHours() +":" + now.getMinutes() + ":" + tempSec;
+    strTime +=  tempCurHour +":" + tempCurMin + ":" + tempCurSec;
     document.getElementById("todaysDate").innerHTML = strDate;
     document.getElementById("todaysTime").innerHTML = strTime;
 
@@ -162,8 +191,11 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  // document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  document.getElementById("day").innerHTML = days;
+  document.getElementById("hour").innerHTML = hours;
+  document.getElementById("min").innerHTML = minutes;
+  document.getElementById("sec").innerHTML =seconds;
     
   // If the count down is over, write some text 
   if (distance < 0) {
