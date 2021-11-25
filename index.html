@@ -1,33 +1,37 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="./css/style.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./css/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="./css/style.css">
 
-    <title>Date and Time</title>
-  </head>
-  <body id="myDiv">
-    
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-block">
-      <a class="navbar-brand" href="#">Date & Time</a>
-      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap"
+    rel="stylesheet">
+
+  <title>Date and Time</title>
+</head>
+
+<body id="myDiv">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-none">
+    <a class="navbar-brand" href="#">Date & Time</a>
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button> -->
-    
-      <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto"> -->
-          <!-- <li class="nav-item active">
+    <!-- <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li> -->
-          <!-- <li class="nav-item">
+    <!-- <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li> -->
-          <!-- <li class="nav-item dropdown">
+    <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Dropdown
             </a>
@@ -38,194 +42,195 @@
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
           </li> -->
-        <!-- </ul> -->
-        <!-- <form class="form-inline my-2 my-lg-0">
+    <!-- </ul> -->
+    <!-- <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form> -->
-        <!-- <div class="d-inline text-center text-light nav-logo">Date & Time 
+    <!-- <div class="d-inline text-center text-light nav-logo">Date & Time 
           <button type="button" class="btn btn-primary btn-sm" id="openbtn" onclick="openFullscreen();">Open</button> 
           <button type="button" class="btn btn-primary btn-sm" id="closebtn" style="display: none;" onclick="closeFullscreen();">Close</button>
         </div>
         
       </div> -->
-      <div class="float-right text-center text-light nav-logo"> 
-        <button type="button" class="btn btn-primary btn-sm" id="openbtn" onclick="openFullscreen();">Open</button> 
-        <button type="button" class="btn btn-primary btn-sm" id="closebtn" style="display: none;" onclick="closeFullscreen();">Close</button>
-      </div>
-    </nav>
+    <div class="float-right text-center text-light nav-logo">
+      <button type="button" class="btn btn-primary btn-sm" id="openbtn" onclick="openFullscreen();">Open</button>
+      <button type="button" class="btn btn-primary btn-sm" id="closebtn" style="display: none;"
+        onclick="closeFullscreen();">Close</button>
+    </div>
+  </nav>
 
-    
 
 
-    <div class="container-fluid pt-3">
-      <div class="row">
-        <div class="col-sm-12">
-          <!-- <div class="card"> -->
-            <!-- <img src="..." class="card-img-top" alt="...">
+
+  <div class="container-fluid pt-3">
+    <div class="row">
+      <div class="col-sm-12">
+        <!-- <div class="card"> -->
+        <!-- <img src="..." class="card-img-top" alt="...">
              -->
-            <div class="card-body">
-              <div class="neo-time-card">
-                <h5 class="card-title fs-20">
-                  <div class="text-center mb-3" id="todaysDate"></div>
-                  <div class="text-center fs-30" id="todaysTime"></div>
-                </h5>
-              </div>
-              <hr>
+        <div class="card-body">
+          <div class="neo-time-card">
+            <h5 class="card-title fs-20">
+              <div class="text-center mb-3" id="todaysDate"></div>
+              <div class="text-center fs-30" id="todaysTime"></div>
+            </h5>
+          </div>
+          <hr>
 
-              <!-- <h5 class="card-title fs-48"> -->
-                <!-- <div class="text-center fs-48" id="demo"></div class="text-center"> -->
-                  <div class="container-fluid">
-                    <div class="row text-center fs-20">
-                      <div class="col-3 col-sm-3 col-md-3">
-                        <div class="neo-card">
-                          <div class="m-auto">
-                            <div id="day" class="fs-30">00</div>
-                            <div>Days</div>
-                          </div>
-                        </div>
-                        
-                      </div>
-                      <div class="col-3 col-sm-3 col-md-3">
-                        <div class="neo-card">
-                          <div class="m-auto">
-                            <div id="hour" class="fs-30">00</div>
-                            <div class="">Hours</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-3 col-sm-3 col-md-3">
-                        <div class="neo-card">
-                          <div class="m-auto">
-                            <div id="min" class="fs-30">00</div>
-                            <div>Min</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-3 col-sm-3 col-md-3">
-                        <div class="neo-card">
-                          <div class="m-auto">
-                            <div id="sec" class="fs-30">00</div>
-                            <div>Sec</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
+          <!-- <h5 class="card-title fs-48"> -->
+          <!-- <div class="text-center fs-48" id="demo"></div class="text-center"> -->
+          <div class="container-fluid">
+            <div class="row text-center fs-20">
+              <div class="col-3 col-sm-3 col-md-3">
+                <div class="neo-card">
+                  <div class="m-auto">
+                    <div id="day" class="fs-30">00</div>
+                    <div>Days</div>
                   </div>
-              <!-- </h5> -->
-              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-            </div>
-          <!-- </div> -->
+                </div>
 
+              </div>
+              <div class="col-3 col-sm-3 col-md-3">
+                <div class="neo-card">
+                  <div class="m-auto">
+                    <div id="hour" class="fs-30">00</div>
+                    <div class="">Hours</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3 col-sm-3 col-md-3">
+                <div class="neo-card">
+                  <div class="m-auto">
+                    <div id="min" class="fs-30">00</div>
+                    <div>Min</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3 col-sm-3 col-md-3">
+                <div class="neo-card">
+                  <div class="m-auto">
+                    <div id="sec" class="fs-30">00</div>
+                    <div>Sec</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- </h5> -->
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
+        <!-- </div> -->
+
       </div>
     </div>
+  </div>
 
-    
 
 
-    <script>
-      function doDate()
-{
-    var strDate = "";
-    var strTime = "";
 
-    var days = new Array("Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat");
-    var months = new Array("Jan", "Feb", "Mar", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec");
+  <script>
+    function doDate() {
+      var strDate = "";
+      var strTime = "";
 
-    var now = new Date();
-    let tempCurHour = now.getHours();
-    let tempCurMin = now.getMinutes();
-    let tempCurSec = now.getSeconds();
-    if (tempCurHour < '10') {
-      tempCurHour = '0'+tempCurHour
+      var days = new Array("Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat");
+      var months = new Array("Jan", "Feb", "Mar", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec");
+
+      var now = new Date();
+      let tempCurHour = now.getHours();
+      let tempCurMin = now.getMinutes();
+      let tempCurSec = now.getSeconds();
+      if (tempCurHour < '10') {
+        tempCurHour = '0' + tempCurHour
+      }
+      if (tempCurMin < '10') {
+        tempCurMin = '0' + tempCurMin
+      }
+      if (tempCurSec < '10') {
+        tempCurSec = '0' + tempCurSec
+      }
+
+      strDate += days[now.getDay()] + ", " + now.getDate() + " " + months[now.getMonth()] + " " + now.getFullYear();
+      strTime += tempCurHour + ":" + tempCurMin + ":" + tempCurSec;
+      document.getElementById("todaysDate").innerHTML = strDate;
+      document.getElementById("todaysTime").innerHTML = strTime;
+
     }
-    if (tempCurMin < '10') {
-      tempCurMin = '0'+tempCurMin
+
+    setInterval(doDate, 1000);
+
+    var elem = document.getElementById("myDiv");
+    // var elem = document.documentElement;
+    function openFullscreen() {
+      document.getElementById("openbtn").style.display = 'none'
+      document.getElementById("closebtn").style.display = 'inline'
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.mozRequestFullScreen) { /* Firefox */
+        elem.mozRequestFullScreen();
+      } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE/Edge */
+        elem.msRequestFullscreen();
+      }
     }
-    if (tempCurSec < '10') {
-      tempCurSec = '0'+tempCurSec
+
+
+    function closeFullscreen() {
+      document.getElementById("closebtn").style.display = 'none'
+      document.getElementById("openbtn").style.display = 'inline'
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullScreen) { /* Firefox */
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) { /* IE/Edge */
+        document.msExitFullscreen();
+      }
     }
 
-    strDate +=  days[now.getDay()] + ", " + now.getDate() + " " + months[now.getMonth()] + " " + now.getFullYear();
-    strTime +=  tempCurHour +":" + tempCurMin + ":" + tempCurSec;
-    document.getElementById("todaysDate").innerHTML = strDate;
-    document.getElementById("todaysTime").innerHTML = strTime;
-
-}
-
-setInterval(doDate, 1000);
-
-var elem = document.getElementById("myDiv");
-// var elem = document.documentElement;
-function openFullscreen() {
-  document.getElementById("openbtn").style.display = 'none'
-  document.getElementById("closebtn").style.display = 'inline'
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.mozRequestFullScreen) { /* Firefox */
-    elem.mozRequestFullScreen();
-  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE/Edge */
-    elem.msRequestFullscreen();
-  }
-}
-
-
-function closeFullscreen() {
-  document.getElementById("closebtn").style.display = 'none'
-  document.getElementById("openbtn").style.display = 'inline'
-  if (document.exitFullscreen) {
-    document.exitFullscreen();
-  } else if (document.mozCancelFullScreen) { /* Firefox */
-    document.mozCancelFullScreen();
-  } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
-    document.webkitExitFullscreen();
-  } else if (document.msExitFullscreen) { /* IE/Edge */
-    document.msExitFullscreen();
-  }
-}
 
 
 
+    var countDownDate = new Date("Jan 1, 2022 00:00:00").getTime();
 
-var countDownDate = new Date("May 10, 2020 09:40:00").getTime();
+    // Update the count down every 1 second
+    var x = setInterval(function () {
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+      // Get today's date and time
+      var now = new Date().getTime();
 
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  // document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-  document.getElementById("day").innerHTML = days;
-  document.getElementById("hour").innerHTML = hours;
-  document.getElementById("min").innerHTML = minutes;
-  document.getElementById("sec").innerHTML =seconds;
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Tied the Knot";
-  }
-}, 1000);
-    </script>
-    
-    <script src="./js/slim/jquery-3.4.1.js"></script>
-    <script src="./js//slim/popper.js"></script>
-    <script src="./js/bootstrap/bootstrap.js"></script>
-  </body>
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      // document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+      document.getElementById("day").innerHTML = days;
+      document.getElementById("hour").innerHTML = hours;
+      document.getElementById("min").innerHTML = minutes;
+      document.getElementById("sec").innerHTML = seconds;
+
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "Tied the Knot";
+      }
+    }, 1000);
+  </script>
+
+  <script src="./js/slim/jquery-3.4.1.js"></script>
+  <script src="./js//slim/popper.js"></script>
+  <script src="./js/bootstrap/bootstrap.js"></script>
+</body>
+
 </html>

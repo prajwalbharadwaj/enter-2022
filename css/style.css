@@ -1,73 +1,70 @@
 * {
-    margin: 0;
-    padding: 0;
-    
+  margin: 0;
+  padding: 0;
 }
 body {
-    font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 .sample {
-    height: 100vh;
-    font-size: 48px;
-    /* width: 100%; */
+  height: 100vh;
+  font-size: 48px;
+  /* width: 100%; */
 }
 
 .d-grid {
-    display: grid !important;
-    align-items: center;
+  display: grid !important;
+  align-items: center;
 }
 
 .fs-48 {
-    font-size: 48px;
+  font-size: 48px;
 }
 .fs-20 {
-    font-size: 20px;
+  font-size: 20px;
 }
 .fs-30 {
-    font-size: 30px;
+  font-size: 30px;
 }
-
+nav {
+  display: none;
+}
 .nav-logo {
-    padding-top: 0.3125rem;
-    padding-bottom: 0.3125rem;
-    margin-right: 1rem;
-    font-size: 1.25rem;
-    line-height: inherit;
-    white-space: nowrap;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
 }
-
 
 .neo-time-card {
-    width: fit-content;
-    padding: 30px 50px;;
-    margin: 0 auto;
-    border-radius: 30px;
-    background: #ffffff;
-    box-shadow:  10px 10px 20px #cccccc, 
-                -10px -10px 20px #ffffff;
+  width: fit-content;
+  padding: 30px 50px;
+  margin: 0 auto;
+  border-radius: 30px;
+  background: #ffffff;
+  /* box-shadow: 10px 10px 20px #cccccc, -10px -10px 20px #ffffff; */
 }
 
 @media only screen and (max-width: 600px) {
-    .neo-card {
-        width: 64px;
-        height: 100px;
-        /* display: flex; */
-        /* margin: 0 auto; */
-        border-radius: 18px;
-        background: #ffffff;
-        box-shadow:  10px 10px 20px #cccccc, 
-                    -10px -10px 20px #ffffff;
-    }
+  .neo-card {
+    width: 64px;
+    height: 100px;
+    /* display: flex; */
+    /* margin: 0 auto; */
+    border-radius: 18px;
+    background: #ffffff;
+    /* box-shadow: 10px 10px 20px #cccccc, -10px -10px 20px #ffffff; */
   }
-  @media only screen and (min-width: 600px) {
-    .neo-card {
-        width: 120px;
-        height: 100px;
-        display: flex;
-        margin: 0 auto;
-        border-radius: 30px;
-        background: #ffffff;
-        box-shadow:  10px 10px 20px #cccccc, 
-                    -10px -10px 20px #ffffff;
-    }
+}
+@media only screen and (min-width: 600px) {
+  .neo-card {
+    width: 120px;
+    height: 100px;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 30px;
+    background: #ffffff;
+    /* box-shadow: 10px 10px 20px #cccccc, -10px -10px 20px #ffffff; */
   }
+}
